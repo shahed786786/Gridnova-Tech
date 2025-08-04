@@ -1,1 +1,109 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GridNova Technologies</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #0b1f3a;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      background: #0f2b54;
+      padding: 0.5rem;
+    }
+    nav ul li {
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .what-we-do {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      background: #0b1f3a;
+      color: #fff;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>GridNova Technologies</h1>
+    <p>Innovating with AI, IoT & Automation</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="section">
+    <h2>What We Do</h2>
+    <div class="what-we-do">
+      <div class="card">
+        <h3>Smart Energy</h3>
+        <p>AI-powered energy management for grid optimization.</p>
+      </div>
+      <div class="card">
+        <h3>IoT Healthcare</h3>
+        <p>Remote patient monitoring and predictive healthcare solutions.</p>
+      </div>
+      <div class="card">
+        <h3>Automation Systems</h3>
+        <p>Intelligent control systems for industries and smart buildings.</p>
+      </div>
+      <div class="card">
+        <h3>Edge Computing</h3>
+        <p>Deploying real-time analytics closer to data sources.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 GridNova Technologies. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
