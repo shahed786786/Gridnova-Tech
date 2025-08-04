@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,59 +6,119 @@
   <title>GridNova Technologies</title>
   <style>
     * {
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+
     body {
-      background: #f9f9f9;
-      color: #333;
+      background-color: #f4f4f4;
       line-height: 1.6;
     }
+
     header {
-      background: #0b1f3a;
+      background-color: #111;
       color: #fff;
       padding: 1rem;
       text-align: center;
     }
+
     nav ul {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
+      gap: 2rem;
       list-style: none;
-      background: #0f2b54;
-      padding: 0.5rem;
+      padding: 0;
     }
-    nav ul li {
-      margin: 0 10px;
-    }
-    nav ul li a {
-      color: #fff;
+
+    nav a {
+      color: white;
       text-decoration: none;
+      font-weight: bold;
     }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1605902711622-cfb43c4437d1') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
     .section {
-      padding: 2rem;
-      max-width: 1000px;
+      padding: 50px 20px;
+      max-width: 1200px;
       margin: auto;
     }
-    .what-we-do {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1rem;
-    }
-    .card {
-      background: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    footer {
+
+    .section h2 {
       text-align: center;
-      background: #0b1f3a;
-      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      flex: 1 1 45%;
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      max-width: 500px;
+    }
+
+    .card img {
+      max-width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-text {
+      flex: 1 1 50%;
+    }
+
+    .about-img {
+      flex: 1 1 40%;
+    }
+
+    .about-img img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
       padding: 1rem;
-      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        flex: 1 1 100%;
+      }
+      .about {
+        flex-direction: column-reverse;
+      }
     }
   </style>
 </head>
@@ -67,38 +126,84 @@
 
   <header>
     <h1>GridNova Technologies</h1>
-    <p>Innovating with AI, IoT & Automation</p>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#stack">Tech Stack</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+  <section class="hero">
+    <h1>Smart Infrastructure. Intelligent Future.</h1>
+    <p>AI-powered IoT solutions driving innovation in energy, healthcare, and automation.</p>
+  </section>
 
-  <section class="section">
-    <h2>What We Do</h2>
-    <div class="what-we-do">
-      <div class="card">
-        <h3>Smart Energy</h3>
-        <p>AI-powered energy management for grid optimization.</p>
+  <section class="section" id="about">
+    <h2>About Us</h2>
+    <div class="about">
+      <div class="about-text">
+        <p>GridNova Technologies is a next-gen solutions company building AI-integrated IoT systems for smarter infrastructure. We focus on energy management, healthcare automation, and real-time industrial intelligence. Our goal is to bridge the gap between edge computing and cloud intelligence to empower decision-making at every level.</p>
       </div>
-      <div class="card">
-        <h3>IoT Healthcare</h3>
-        <p>Remote patient monitoring and predictive healthcare solutions.</p>
-      </div>
-      <div class="card">
-        <h3>Automation Systems</h3>
-        <p>Intelligent control systems for industries and smart buildings.</p>
-      </div>
-      <div class="card">
-        <h3>Edge Computing</h3>
-        <p>Deploying real-time analytics closer to data sources.</p>
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1581092334504-3c1d20b8e5e5" alt="About GridNova">
       </div>
     </div>
+  </section>
+
+  <section class="section" id="services">
+    <h2>What We Do</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Energy">
+        <h3>Smart Energy Systems</h3>
+        <p>Optimize energy usage and costs through AI-driven analytics, load balancing, and remote energy management solutions.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1588776814546-ec7ec44ec844" alt="Healthcare">
+        <h3>Healthcare Automation</h3>
+        <p>IoT-powered monitoring for hospitals and clinics, enabling better patient tracking, predictive maintenance, and equipment usage insights.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1602080758590-3d6e07c7aab4" alt="Industrial">
+        <h3>Industrial Intelligence</h3>
+        <p>Smart sensors and edge computing to transform manufacturing, improve safety, and ensure real-time fault detection.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1601134467661-3d775b999c01" alt="Automation">
+        <h3>Automation & Control</h3>
+        <p>Integrated automation systems for factories, smart buildings, and public infrastructure using custom AI/ML models.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="stack">
+    <h2>Technology Stack</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>AI/ML</h3>
+        <p>Computer vision, anomaly detection, and predictive modeling for data-driven infrastructure.</p>
+      </div>
+      <div class="card">
+        <h3>IoT & Edge</h3>
+        <p>Microcontrollers, sensors, edge nodes with real-time data collection and processing.</p>
+      </div>
+      <div class="card">
+        <h3>Cloud & APIs</h3>
+        <p>Cloud storage, RESTful APIs, and dashboard integration with major platforms.</p>
+      </div>
+      <div class="card">
+        <h3>Cybersecurity</h3>
+        <p>Secure data transfer, device authentication, and threat detection systems built-in.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p style="text-align:center;">Email us at: <strong>contact@gridnova.tech</strong></p>
   </section>
 
   <footer>
